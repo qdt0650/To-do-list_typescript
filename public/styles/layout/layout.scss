@@ -1,0 +1,13 @@
+@use '../base/font';
+@use '../base/reset';
+@use '../base/variables' as *;
+@use '../helpers/utilities' as *;
+
+.wrap {
+   @include setFlex(flex, column, center, center);
+   @include maxWidth(1024px);
+   @include setMargin(30px, auto, 50px, auto);
+}
+.container {
+   @include setMargin(30px, 0, 20px, 0);
+}

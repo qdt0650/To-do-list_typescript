@@ -1,0 +1,16 @@
+@use '../base/font';
+@use '../base/reset';
+@use '../base/variables' as *;
+@use '../helpers/utilities' as *;
+
+input[type='text'] {
+   @include setInput(170px, 30px, 7px, #fff, #999, 5px);
+}
+
+.input_color {
+   @include setWH(30px, 34px);
+   border-radius: $DEF_BORDER_RADIUS - 1;
+   border: 0;
+   background-color: transparent;
+   cursor: pointer;
+}

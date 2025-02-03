@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+input::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+html,
+body,
+textarea,
+input::placeholder,
+input,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+i,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+article {
+  margin: 0;
+  padding: 0;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: -0.024em;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+html,
+body {
+  -webkit-text-size-adjust: none;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+a {
+  text-decoration: none;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button,
+i,
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal !important;
+  font-weight: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+input {
+  border: 1px solid #666;
+}
+
+.header h2 {
+  font-size: 36px;
+}
+
+.input_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_content label {
+  display: inline-block;
+}
+
+#addBtn {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: #111;
+  width: 37px;
+  height: 37px;
+}
+
+#addBtn span,
+#addBtn span img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.todo_list {
+  margin-top: 15px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.todo_list li {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+.todo_list li:last-child {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.todo_list input[type=text] {
+  width: 162px;
+  height: 25px;
+}
+
+.edit_content {
+  display: none;
+}
+
+.edit_content.active {
+  display: block;
+}
+
+.edit_mark {
+  font-size: 12px;
+  color: #333;
+  font-weight: 300;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: #777 !important;
+}/*# sourceMappingURL=common.css.map */

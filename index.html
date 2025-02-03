@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>To-do-list_typescript</title>
+      <link rel="stylesheet" href="./public/styles/layout/layout.css" />
+      <link rel="stylesheet" href="./public/styles/pages/common.css" />
+      <link rel="stylesheet" href="./public/styles/components/label.css" />
+      <link rel="stylesheet" href="./public/styles/components/button.css" />
+   </head>
+   <body>
+      <div class="wrap">
+         <div class="header">
+            <h2>To-do-list</h2>
+         </div>
+         <div class="container">
+            <div class="input_content">
+               <form id="todo_form">
+                  <label for="todoInput">
+                     <input type="text" id="todoInput" placeholder="할 일을 입력해주세요." />
+                  </label>
+                  <label for="textColorChange">
+                     <input type="color" id="textColorChange" class="input_color" />
+                  </label>
+               </form>
+               <button type="button" id="addBtn">
+                  <span>
+                     <img src="./public/images/icons/addIcon.png" alt="등록" />
+                  </span>
+               </button>
+               <button type="button" id="pickDeleteButton">
+                  <span>선택삭제</span>
+               </button>
+               <button type="button" id="completeTodoDeleteButton">
+                  <span>완료삭제</span>
+               </button>
+            </div>
+            <div>
+               <ul class="todo_list">
+                  <!-- 할 일 등록 list 및 수정-->
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <!-- <script type="module" src="./features/add.js"></script> -->
+      <!-- <script type="module" src="./features/edit.js"></script> -->
+   </body>
+</html>

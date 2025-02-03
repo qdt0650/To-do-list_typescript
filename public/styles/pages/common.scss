@@ -1,0 +1,63 @@
+@use '../base/font';
+@use '../base/reset';
+@use '../base/variables' as *;
+@use '../helpers/utilities' as *;
+
+// header
+.header h2 {
+   font-size: $DEF_FONT_SIZE + 20;
+}
+
+// 할 일 입력
+.input_content {
+   @include setFlex(flex, row, center, center);
+}
+.input_content label {
+   display: inline-block;
+}
+// #todoInput {
+//    @include setInput(170px, 30px, 7px, #fff, #999, 5px);
+// }
+
+#addBtn {
+   @include setBtn(0, 0, 0, 0, #fff, transparent, 0, #111);
+   @include setWH(37px, 37px);
+}
+
+#addBtn span,
+#addBtn span img {
+   display: inline-block;
+   @include setWH(100%, 100%);
+}
+
+// 할 일 리스트
+.todo_list {
+   @include setMargin(15px, 0, 0, 0);
+}
+.todo_list li {
+   @include setMargin(0, 0, 10px, 0);
+   &:last-child {
+      @include setMargin(0, 0, 0, 0);
+   }
+}
+
+.todo_list input[type='text'] {
+   @include setWH(162px, 25px);
+}
+
+.edit_content {
+   display: none;
+}
+.edit_content.active {
+   display: block;
+}
+
+.edit_mark {
+   font-size: 12px;
+   color: #333;
+   font-weight: 300;
+}
+.complete {
+   text-decoration: line-through;
+   color: #777 !important;
+}
