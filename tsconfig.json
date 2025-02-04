@@ -10,7 +10,10 @@
       "skipLibCheck": true,
       "outDir": "dist", // 컴파일된 javascript 파일이 저장될 디렉토리
       "noImplicitAny": true,
+      "sourceMap": true,
       "strictNullChecks": true,
+      "composite": true,
+      // "include": ["src/features/*.ts", "src/utilities/*.ts"],
       "lib": ["DOM", "ESNext"]
    }
 }
