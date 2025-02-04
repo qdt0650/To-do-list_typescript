@@ -1,19 +1,19 @@
 import { readToDos } from '../utilities/storage.js'
 
-export const completeTodoButton = (saveToDos) => {
+export const completeTodoButton = (saveToDos: any) => {
    const completeButtons = document.querySelectorAll('.complete_buttons')
 
-   const handleComplete = (event) => {
+   const handleComplete = (event: Event) => {
       // 클릭한 버튼의 부모요소를 가져옵니다.
-      const parentTodoContent = event.target.closest('.todo_content')
+      const parentTodoContent = (event.target as HTMLElement).closest('.todo_content') as HTMLDivElement
       const todoContentId = parentTodoContent.getAttribute('data-id')
-      const childrenTodoText = parentTodoContent.querySelector('.todo_text')
-      const editMark = parentTodoContent.querySelector('.edit_mark')
-      const childrenTodoDate = parentTodoContent.querySelector('.todo_date')
+      const childrenTodoText = parentTodoContent.querySelector('.todo_text') as HTMLSpanElement
+      const editMark = parentTodoContent.querySelector('.edit_mark') as HTMLSpanElement
+      const childrenTodoDate = parentTodoContent.querySelector('.todo_date') as HTMLSpanElement
 
       // 로컬스토리지 데이터를 불러옵니다.
       const getTodo = readToDos()
-      const dataChangeCom = getTodo.map((data) => {
+      const dataChangeCom = getTodo.map((data: any) => {
          // 로컬스토리지 id값과 클릭한 요소의 id값을 비교해줍니다.
          if (data.id === Number(todoContentId)) {
             const confirmCheck = () => {
