@@ -49,11 +49,13 @@ export const edit = (editContent: HTMLFormElement, parentTodo: HTMLLIElement, to
       editContent.classList.remove('active')
    })
 
-   // const cancelEditButton = editContent.querySelector('.cancle_edit_button') as HTMLButtonElement
+   const cancelEditButton = editContent.querySelector('.cancle_edit_button') as HTMLButtonElement
 
    // 수정취소버튼 클릭 시 이벤트 처리
-   // cancelEditButton.addEventListener('click', () => {
-   //    editInput.value = todoText.textContent
-   //    editContent.classList.remove('active')
-   // })
+   cancelEditButton.addEventListener('click', () => {
+      if (todoText.textContent !== null) {
+         editInput.value = todoText.textContent
+      }
+      editContent.classList.remove('active')
+   })
 }
