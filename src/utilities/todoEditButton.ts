@@ -1,5 +1,5 @@
 // 할 일 수정버튼 클릭 이벤트
-import { edit } from '../features/edit'
+import { edit } from '../features/edit.js'
 export const todoEditButton = (saveToDos: any) => {
    const multipleTodoLi = document.querySelectorAll('.multiple_todo')
 
@@ -13,7 +13,7 @@ export const todoEditButton = (saveToDos: any) => {
       const todoText = parentTodo.querySelector('.todo_text') as HTMLSpanElement
 
       // 클릭한 버튼의 수정html 가져옵니다.
-      const editContent = parentTodo.querySelector('.edit_content') as HTMLButtonElement
+      const editContent = parentTodo.querySelector('.edit_content') as HTMLFormElement
 
       // 수정 input 가져옵니다.
       const editInput = editContent.querySelector('.edit_input') as HTMLInputElement
