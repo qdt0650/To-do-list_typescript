@@ -1,7 +1,7 @@
 import { TodoItem } from '../features/add'
-export const saveToDos = (todo: TodoItem[]) => localStorage.setItem('todo', JSON.stringify(todo))
+export const saveToDos = (todo: TodoItem[]): void => localStorage.setItem('todo', JSON.stringify(todo))
 
-export const readToDos = () => {
+export const readToDos = (): TodoItem[] => {
    const getTodos = localStorage.getItem('todo')
    return getTodos ? JSON.parse(getTodos) : []
    //    return JSON.parse(localStorage.getItem('todo')) || []
