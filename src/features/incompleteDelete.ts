@@ -1,16 +1,18 @@
 // 단건 삭제, 다건(선택)삭제
 import { TodoItem } from '../interfaces/todoItem.js'
 
-export const incompleteDelete = (saveToDos: any, todos: TodoItem[]) => {
-   const deleteButtons = document.querySelectorAll('.delete_buttons')
+export const incompleteDelete = (saveToDos: (todos: TodoItem[]) => void, todos: TodoItem[]) => {
+   const deleteButtons = document.querySelectorAll('.delete_buttons') as NodeListOf<HTMLButtonElement>
    deleteButtons.forEach((deleteButton) => {
       // 삭제버튼 클릭 시 이벤트
-      deleteButton.addEventListener('click', (event) => {
+      deleteButton.addEventListener('click', (event: MouseEvent) => {
          const todoContent = (event.target as HTMLElement).closest('.todo_content')
          const todoContentId = todoContent?.getAttribute('data-id')
 
          // 로컬스토리지 id값이랑 클릭한 할 일의 id 값이랑 비교후 일치하지 않는 것들만 반환
-         todos = todos.filter((itemt) => itemt.id !== Number(todoContentId))
+         if (todoContentId !== null) {
+            todos = todos.filter((itemt) => itemt.id !== Number(todoContentId))
+         }
 
          // 클릭한 요소를 지워준다.
          todoContent?.remove()
@@ -32,7 +34,7 @@ export const incompleteDelete = (saveToDos: any, todos: TodoItem[]) => {
          }
       })
 
-      const checkDeleteFilter = todos.filter((x) => x.todoCheck !== true)
+      const checkDeleteFilter: TodoItem[] = todos.filter((x) => x.todoCheck !== true)
       saveToDos(checkDeleteFilter)
    })
 }

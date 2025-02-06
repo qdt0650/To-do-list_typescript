@@ -2,7 +2,7 @@
 
 import { TodoItem } from '../interfaces/todoItem.js'
 
-export const completedDelete = (saveToDos: any, todos: TodoItem[]) => {
+export const completedDelete = (saveToDos: (todos: TodoItem[]) => void, todos: TodoItem[]) => {
    // 완료삭제 버튼 요소를 가져옵니다.
    const completeTodoDeleteButton = document.querySelector('#completeTodoDeleteButton') as HTMLButtonElement
 
