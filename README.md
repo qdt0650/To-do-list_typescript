@@ -32,7 +32,7 @@
 - `tsc --init` tsconfig.json 파일 생성 -> `outDir`옵션 설정으로 컴파일된 JavaScript파일이 저장될 디렉토리 지정
 - `tsc` 명령어로 컴파
 
-
+<br />
 
 ## 🔥주요 변경 사항
 1) `TodoItem` interface를 생성하여 todo 데이터 타입 정의
@@ -63,6 +63,8 @@ deleteButton.addEventListener('click', (event: MouseEvent) => {
          ...
 })
 ```
+
+<br />
 
 ## ⚙️환경 설정 적용
 - `strict: true` -> 엄격한 타입 체크 활성화로 코드 안정성을 강화
