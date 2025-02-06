@@ -3,7 +3,7 @@
 
 ## 📌프로젝트 소개
 - JavaScript로 작업한 To-do-list 프로젝트를 TypeScript로 리팩토링한 프로젝트 입니다.
-[To-do-list_javascript 바로가기](https://github.com/qdt0650/To-do-list)
+- [To-do-list_javascript 바로가기](https://github.com/qdt0650/To-do-list)
 
 <br />
 
