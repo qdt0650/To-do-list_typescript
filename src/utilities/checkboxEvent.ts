@@ -1,12 +1,12 @@
 import { TodoItem } from '../interfaces/todoItem.js'
 
 // 체크박스 선택 이벤트
-export const checkboxEvent = (todos: TodoItem[], saveToDos: any) => {
-   const checkboxAll = document.querySelectorAll('.todo_checkboxes')
+export const checkboxEvent = (todos: TodoItem[], saveToDos: (todos: TodoItem[]) => void) => {
+   const checkboxAll = document.querySelectorAll('.todo_checkboxes') as NodeListOf<HTMLInputElement>
 
    // 모든 checkbox들에 change이벤트를 준다.
-   checkboxAll.forEach((checkbox, index) => {
-      checkbox.addEventListener('change', (event) => {
+   checkboxAll.forEach((checkbox, index: number) => {
+      checkbox.addEventListener('change', (event: Event) => {
          checkbox.setAttribute('checked', '')
          // todo배열 index번째 todoCheck 속성을 변경된 checked값으로 바꿔준다.
          todos[index].todoCheck = (event.target as HTMLInputElement).checked

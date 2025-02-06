@@ -3,7 +3,7 @@ import { TodoItem } from '../interfaces/todoItem.js'
 import { newDate } from '../utilities/newDate.js'
 import { readToDos } from '../utilities/storage.js'
 
-export const edit = (editContent: HTMLFormElement, parentTodo: HTMLLIElement, todoText: HTMLSpanElement, editInput: HTMLInputElement, saveToDos: any) => {
+export const edit = (editContent: HTMLFormElement, parentTodo: HTMLLIElement, todoText: HTMLSpanElement, editInput: HTMLInputElement, saveToDos: (todos: TodoItem[]) => void) => {
    editContent.addEventListener('submit', (event: SubmitEvent) => {
       event.preventDefault()
       const todoContent = parentTodo.querySelector('.todo_content') as HTMLDivElement

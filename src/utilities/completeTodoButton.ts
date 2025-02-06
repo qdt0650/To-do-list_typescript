@@ -1,7 +1,8 @@
+import { TodoItem } from '../interfaces/todoItem.js'
 import { readToDos } from '../utilities/storage.js'
 
-export const completeTodoButton = (saveToDos: any) => {
-   const completeButtons = document.querySelectorAll('.complete_buttons')
+export const completeTodoButton = (saveToDos: (todos: TodoItem[]) => void) => {
+   const completeButtons = document.querySelectorAll('.complete_buttons') as NodeListOf<HTMLButtonElement>
 
    const handleComplete = (event: Event) => {
       // 클릭한 버튼의 부모요소를 가져옵니다.
@@ -12,8 +13,8 @@ export const completeTodoButton = (saveToDos: any) => {
       const childrenTodoDate = parentTodoContent.querySelector('.todo_date') as HTMLSpanElement
 
       // 로컬스토리지 데이터를 불러옵니다.
-      const getTodo = readToDos()
-      const dataChangeCom = getTodo.map((data: any) => {
+      const getTodo: TodoItem[] = readToDos()
+      const dataChangeCom = getTodo.map((data) => {
          // 로컬스토리지 id값과 클릭한 요소의 id값을 비교해줍니다.
          if (data.id === Number(todoContentId)) {
             const confirmCheck = () => {

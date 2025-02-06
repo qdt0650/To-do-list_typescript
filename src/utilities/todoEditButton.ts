@@ -1,7 +1,8 @@
 // 할 일 수정버튼 클릭 이벤트
 import { edit } from '../features/edit.js'
-export const todoEditButton = (saveToDos: any) => {
-   const multipleTodoLi = document.querySelectorAll('.multiple_todo')
+import { TodoItem } from '../interfaces/todoItem.js'
+export const todoEditButton = (saveToDos: (todos: TodoItem[]) => void) => {
+   const multipleTodoLi = document.querySelectorAll('.multiple_todo') as NodeListOf<HTMLButtonElement>
 
    const handleEdit = (event: Event) => {
       event.preventDefault()
@@ -28,7 +29,7 @@ export const todoEditButton = (saveToDos: any) => {
    }
 
    multipleTodoLi.forEach((li) => {
-      const todoEditButtons = li.querySelectorAll('.edit_buttons')
+      const todoEditButtons = li.querySelectorAll('.edit_buttons') as NodeListOf<HTMLButtonElement>
       todoEditButtons.forEach((button) => {
          button.addEventListener('click', handleEdit)
       })
