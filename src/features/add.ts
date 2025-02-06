@@ -67,8 +67,8 @@ todoForm.addEventListener('submit', handleInputValue)
 todoAddButton.addEventListener('click', handleInputValue)
 
 // 화면에 출력해줍니다.
-const updateTodo = (todos: TodoItem[]) => {
-   const todoHtml = todos.map((single) => {
+const updateTodo = (todos: TodoItem[]): void => {
+   const todoHtml = todos.map((single: TodoItem): string => {
       return createHtml(single)
    })
    todoListUl.innerHTML = todoHtml.join('')
