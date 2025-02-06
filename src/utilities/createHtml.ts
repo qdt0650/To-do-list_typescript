@@ -1,4 +1,5 @@
-import { TodoItem } from '../features/add'
+import { TodoItem } from '../interfaces/todoItem.js'
+
 export const createHtml = (single: TodoItem) => {
    return `
       <li class="multiple_todo" >

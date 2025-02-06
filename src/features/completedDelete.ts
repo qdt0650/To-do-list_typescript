@@ -1,6 +1,6 @@
 // 완료된 할 일 삭제
 
-import { TodoItem } from './add'
+import { TodoItem } from '../interfaces/todoItem.js'
 
 export const completedDelete = (saveToDos: any, todos: TodoItem[]) => {
    // 완료삭제 버튼 요소를 가져옵니다.

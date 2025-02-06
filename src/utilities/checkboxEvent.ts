@@ -1,4 +1,4 @@
-import { TodoItem } from '../features/add'
+import { TodoItem } from '../interfaces/todoItem.js'
 
 // 체크박스 선택 이벤트
 export const checkboxEvent = (todos: TodoItem[], saveToDos: any) => {

@@ -6,6 +6,7 @@ import { todoEditButton } from '../utilities/todoEditButton.js'
 import { completeTodoButton } from '../utilities/completeTodoButton.js'
 import { incompleteDelete } from './incompleteDelete.js'
 import { completedDelete } from './completedDelete.js'
+import { TodoItem } from '../interfaces/todoItem.js'
 
 const todoForm = document.querySelector('#todo_form') as HTMLFormElement
 const todoInput = document.querySelector('#todoInput') as HTMLInputElement
@@ -13,15 +14,6 @@ const textColorChange = document.querySelector('#textColorChange') as HTMLInputE
 const todoListUl = document.querySelector('.todo_list') as HTMLUListElement
 const todoAddButton = document.querySelector('#addBtn') as HTMLButtonElement
 
-export interface TodoItem {
-   id?: number
-   todo?: string
-   textColor?: string
-   todoDate?: string
-   todoCheck?: boolean
-   completeButton?: boolean
-   editMark?: boolean
-}
 let todos: TodoItem[] = []
 
 const handleInputValue = (event: Event) => {
@@ -29,13 +21,13 @@ const handleInputValue = (event: Event) => {
    event.preventDefault()
 
    // 입력전 로컬스토리지 최신 데이터를 불러옵니다.
-   const currentToDos = readToDos()
+   const currentToDos: TodoItem[] = readToDos()
 
    // input에 입력한 값을 가져옵니다.
    const todoText: string = todoInput.value
 
    // input에 입력한 길이를 가져와 조건에 맞지 않으면 alert창을 띄어줍니다.
-   const todoTextLength = todoText.length
+   const todoTextLength: number = todoText.length
    if (todoTextLength <= 1 || todoTextLength >= 20) {
       alert('1자 이상 20자 이하로 입력해주세요')
       return
@@ -45,7 +37,7 @@ const handleInputValue = (event: Event) => {
    todoInput.value = ''
 
    // 입력한 데이터를 객체 형태로 변환해줍니다.
-   const todoData = {
+   const todoData: TodoItem = {
       id: Date.now(),
       todo: todoText, // 할 일 텍스트
       textColor: textColorChange.value, // 할 일 텍스트 색상

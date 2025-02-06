@@ -1,7 +1,8 @@
 // 수정완료, 수정취소, 로컬스토리지 저장
+import { TodoItem } from '../interfaces/todoItem.js'
 import { newDate } from '../utilities/newDate.js'
 import { readToDos } from '../utilities/storage.js'
-import { TodoItem } from './add.js'
+
 export const edit = (editContent: HTMLFormElement, parentTodo: HTMLLIElement, todoText: HTMLSpanElement, editInput: HTMLInputElement, saveToDos: any) => {
    editContent.addEventListener('submit', (event: SubmitEvent) => {
       event.preventDefault()

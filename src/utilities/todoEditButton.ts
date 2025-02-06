@@ -1,5 +1,4 @@
 // 할 일 수정버튼 클릭 이벤트
-import { TodoItem } from '../features/add.js'
 import { edit } from '../features/edit.js'
 export const todoEditButton = (saveToDos: any) => {
    const multipleTodoLi = document.querySelectorAll('.multiple_todo')

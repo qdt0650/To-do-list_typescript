@@ -1,6 +1,5 @@
 // 단건 삭제, 다건(선택)삭제
-
-import { TodoItem } from './add'
+import { TodoItem } from '../interfaces/todoItem.js'
 
 export const incompleteDelete = (saveToDos: any, todos: TodoItem[]) => {
    const deleteButtons = document.querySelectorAll('.delete_buttons')

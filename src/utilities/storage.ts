@@ -1,4 +1,5 @@
-import { TodoItem } from '../features/add'
+import { TodoItem } from '../interfaces/todoItem.js'
+
 export const saveToDos = (todo: TodoItem[]): void => localStorage.setItem('todo', JSON.stringify(todo))
 
 export const readToDos = (): TodoItem[] => {
